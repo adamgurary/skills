@@ -132,7 +132,7 @@ echo "MLFLOW_EXPERIMENT_ID=$MLFLOW_EXPERIMENT_ID"
 1. **Install MLflow** (version >=3.8.0)
 2. **Configure environment** (tracking URI and experiment)
    - **Guide**: Follow `references/setup-guide.md` Steps 1-2
-3. **Integrate tracing** (autolog for supported frameworks, or @mlflow.trace for custom code)
+3. **Integrate tracing** (autolog and @mlflow.trace decorators)
    - ⚠️ **MANDATORY**: Use the `instrumenting-with-mlflow-tracing` skill for tracing setup
    - ✓ **VERIFY**: Run `scripts/validate_tracing_runtime.py` after implementing
 
@@ -142,7 +142,7 @@ echo "MLFLOW_EXPERIMENT_ID=$MLFLOW_EXPERIMENT_ID"
 
 - [ ] MLflow >=3.8.0 installed
 - [ ] MLFLOW_TRACKING_URI and MLFLOW_EXPERIMENT_ID set
-- [ ] Autolog enabled for supported frameworks, or @mlflow.trace added for custom code (do not add both to the same framework operations)
+- [ ] Autolog enabled and @mlflow.trace decorators added
 - [ ] Test run creates a trace (verify trace ID is not None)
 
 **Validation scripts:**
